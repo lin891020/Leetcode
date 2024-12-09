@@ -22,7 +22,7 @@ The problem requires finding the minimum number of jumps needed to reach the las
 - **Space Complexity**: $$O(1)$$
   - Only a few extra variables are used, regardless of the input size.
 ---
-## Code
+## Code (C++)
 ```cpp
 /*************************************************
 * Name:         jump
