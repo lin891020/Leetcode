@@ -11,7 +11,7 @@ The task is to find a starting gas station index that allows completing a circul
 - **Time Complexity**: $$O(n)$$, where $$n$$ is the number of gas stations. We only make one pass through the gas stations.
 - **Space Complexity**: $$O(1)$$, as we only use a few extra variables.
 
-## Code
+## Code (C++)
 ```cpp
 /*************************************************
 * Name:        canCompleteCircuit
