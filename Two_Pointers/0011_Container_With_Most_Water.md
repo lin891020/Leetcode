@@ -20,7 +20,7 @@ This insight forms the basis of the **Two Pointer Method**, which eliminates unn
 2. **Iterate Until the Pointers Meet**:
    - Calculate the current area using:
 
-    ```
+    ```cpp
         area = (right - left) * min(height[left], height[right])
     ```
 

@@ -21,7 +21,7 @@ The problem is to find the minimal length of a contiguous subarray whose sum is 
 
 - **Time Complexity**: $$O(n)$$  
   - Both pointers traverse the array at most once.
-- **Space Complexity**: $$O(1)$$ 
+- **Space Complexity**: $$O(1)$$
   - No additional space is used other than variables.
 
 ---
