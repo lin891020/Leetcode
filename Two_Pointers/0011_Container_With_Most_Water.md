@@ -1,5 +1,9 @@
+# 11. Container With Most Water
+
 ## Intuition
+
 The problem requires finding the maximum area of water that can be trapped between two vertical lines. The key observation is:
+
 - The area of water is determined by the height of the shorter line and the width between the two lines.
 - Moving the taller line inward won't increase the area since the shorter line determines the height of the container. Thus, we should always move the pointer pointing to the shorter line to potentially find a taller line and maximize the area.
 
@@ -15,9 +19,11 @@ This insight forms the basis of the **Two Pointer Method**, which eliminates unn
 
 2. **Iterate Until the Pointers Meet**:
    - Calculate the current area using:
-     ```
-     area = (right - left) * min(height[left], height[right])
-     ```
+
+    ```
+        area = (right - left) * min(height[left], height[right])
+    ```
+
    - Update `max_area` if `area` is greater than the current `max_area`.
 
 3. **Move the Pointer of the Shorter Line**:
@@ -34,11 +40,13 @@ This insight forms the basis of the **Two Pointer Method**, which eliminates unn
 - **Time Complexity**: $$O(n)$$
 Each pointer moves at most `n` steps, where `n` is the length of the `height` array. Each step performs a constant amount of work.
 
-- **Space Complexity**: $$O(1)$$ 
+- **Space Complexity**: $$O(1)$$
 The algorithm uses only a constant amount of extra space for variables.
 
 ---
+
 ## Code (C++)
+
 ```cpp []
 /*************************************************
 * Name:        maxArea
