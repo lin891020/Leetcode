@@ -1,8 +1,11 @@
+# [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
 
 The task is to compute an array where each element at index `i` represents the product of all elements in the input array except the one at `i`. The challenge is to solve this without using division and with a time complexity of O(n).
 
 ---
+
 ## Approach
 
 1. **Left Product Calculation**:
@@ -13,7 +16,9 @@ The task is to compute an array where each element at index `i` represents the p
    - Use a variable `right` initialized to 1 to keep track of the running product of elements to the right.
    - Traverse the input array from right to left. For each element, multiply `answer[i]` with `right` to include the product of all elements to the right of `i`.
    - Update `right` by multiplying it with `nums[i]` for the next iteration.
+
 ---
+
 ## Complexity
 
 - **Time Complexity**: $$O(n)$$
@@ -21,7 +26,9 @@ The task is to compute an array where each element at index `i` represents the p
   
 - **Space Complexity**: $$O(1)$$
   - The space complexity is O(1) if we ignore the space used to store the output array, as no additional data structures proportional to the input size are used.
+
 ---
+
 ## Code (C++)
 
 ```cpp
@@ -57,3 +64,4 @@ public:
         return answer;
     }
 };
+```

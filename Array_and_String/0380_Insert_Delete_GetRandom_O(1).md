@@ -1,21 +1,30 @@
+# 38. Insert Delete GetRandm O(1)
+
 ## Intuition
+
 The problem is to design a data structure that supports `insert`, `remove`, and `getRandom` operations in constant time. The key observation is to use a combination of a dynamic array and a hash table, which reduces the problem to efficient index-based operations and direct access to elements.
 
 ---
+
 ## Approach
+
 1. **Insert Operation**: Use an unordered map to check if the element already exists in constant time. If not, add it to the vector and store its index in the map.
 2. **Remove Operation**: To delete an element in constant time, swap it with the last element in the vector and update the map. Then remove the last element from the vector.
 3. **GetRandom Operation**: Generate a random index within the bounds of the vector's size and return the element at that index.
 
 ---
+
 ## Complexity
+
 - **Time Complexity**: $O(1)$
   - The time complexity for `insert`, `remove`, and `getRandom` operations is $O(1)$ because each operation is either a direct access or an update in a hash table or a vector.
 - **Space Complexity**: $O(n)$
   - The algorithm uses additional space for the hash table, which stores indices for up to $n$ elements, resulting in $O(n)$ space complexity.
 
 ---
+
 ## Code (C++)
+
 ```cpp
 /*************************************************
 * Name:        RandomizedSet
@@ -67,11 +76,4 @@ public:
         return nums[randomIndex];
     }
 };
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet* obj = new RandomizedSet();
- * bool param_1 = obj->insert(val);
- * bool param_2 = obj->remove(val);
- * int param_3 = obj->getRandom();
- */
+```
