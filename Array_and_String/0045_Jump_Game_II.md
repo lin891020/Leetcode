@@ -1,9 +1,14 @@
+# [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The problem requires finding the minimum number of jumps needed to reach the last index of an array. The key idea is to use a greedy approach, where at each position, we calculate the farthest index that can be reached. By updating the farthest point and counting jumps whenever we reach the current maximum range, we ensure the solution is optimal.
 
 ---
+
 ## Approach
-1. **Initialization**: 
+
+1. **Initialization**:
    - Start with `steps` as 0, which counts the number of jumps.
    - `current_end` tracks the end of the current jump range.
    - `farthest` keeps track of the farthest point that can be reached in the current range.
@@ -15,14 +20,20 @@ The problem requires finding the minimum number of jumps needed to reach the las
 
 3. **Return the result**:
    - The number of `steps` needed to reach the last index.
+
 ---
+
 ## Complexity
+
 - **Time Complexity**: $$O(n)$$
   - We iterate through the array once, where `n` is the number of elements in the array.
 - **Space Complexity**: $$O(1)$$
   - Only a few extra variables are used, regardless of the input size.
+
 ---
+
 ## Code (C++)
+
 ```cpp
 /*************************************************
 * Name:         jump
@@ -66,3 +77,4 @@ public:
         return steps;
     }
 };
+```

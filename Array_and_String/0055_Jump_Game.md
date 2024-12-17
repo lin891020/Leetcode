@@ -1,9 +1,13 @@
+# [55. Jump Game](https://leetcode.com/problems/jump-game/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The task is to determine if you can jump to the last index of the array starting from the first index. By maintaining the farthest position that can be reached at any point, we can determine if the last index is reachable.
 
 ---
 
 ## Approach
+
 1. **Initialize `farthest`**: Set `farthest` to 0, representing the farthest position reachable at the start.
 2. **Traverse the array**: For each index, check if it is reachable. If not, return `false`.
 3. **Update `farthest`**: Update `farthest` to be the maximum of its current value and the sum of the current index and the value at that index.
@@ -13,6 +17,7 @@ The task is to determine if you can jump to the last index of the array starting
 ---
 
 ## Complexity
+
 - **Time Complexity**: $$O(n)$$
   - The algorithm only requires a single pass through the array, where $$n$$ is the length of the array.
 - **Space Complexity**: $$O(1)$$
@@ -21,6 +26,7 @@ The task is to determine if you can jump to the last index of the array starting
 ---
 
 ## Code (C++)
+
 ```cpp
 /*************************************************
 * Name:         canJump
@@ -60,3 +66,4 @@ public:
         return false;
     }
 };
+```

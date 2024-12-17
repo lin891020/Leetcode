@@ -1,9 +1,13 @@
+# [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The problem is to find the longest common prefix from a list of strings. The idea is to start with the first string as the initial prefix and progressively compare it with each of the following strings. If the current string doesn't match the prefix, we shorten the prefix character by character until it either matches or becomes empty.
 
 ---
 
 ## Approach
+
 1. **Initialize the prefix**: Set the first string as the initial prefix.
 2. **Iterate through the remaining strings**: Compare each string with the current prefix.
 3. **Shorten the prefix**: For each string that doesn't start with the prefix, progressively shorten the prefix until it matches or the prefix becomes an empty string.
@@ -12,6 +16,7 @@ The problem is to find the longest common prefix from a list of strings. The ide
 ---
 
 ## Complexity
+
 - **Time Complexity**: $$O(S)$$
   - The time complexity is $$O(S)$$, where $$S$$ is the total number of characters in all strings combined. Each character is compared once during the process.
   
@@ -21,6 +26,7 @@ The problem is to find the longest common prefix from a list of strings. The ide
 ---
 
 ## Code (C++)
+
 ```cpp
 /*************************************************
 * Name:        longestCommonPrefix
@@ -58,3 +64,4 @@ public:
         return prefix;
     }
 };
+```

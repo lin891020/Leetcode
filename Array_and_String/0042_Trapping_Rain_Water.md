@@ -1,15 +1,20 @@
-## Intuition:
+# [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/?envType=study-plan-v2&envId=top-interview-150)
+
+## Intuition
+
 The problem requires calculating the total amount of water that can be trapped between columns of different heights. The amount of water trapped above each column depends on the height of the tallest columns to its left and right. The minimum of these two heights defines how much water can be trapped at that position.
 
-## Approach:
-1. **Left and Right Maximum Arrays**: 
+## Approach
+
+1. **Left and Right Maximum Arrays**:
    - We can use two arrays to store the maximum height to the left of each column (`left_max[]`) and the maximum height to the right (`right_max[]`).
 2. **Water Calculation**:
    - For each column, the trapped water is calculated by the formula:  
      `water_at_i = min(left_max[i], right_max[i]) - height[i]`.
    - Accumulate this value for all columns to get the total trapped water.
 
-## Complexity:
+## Complexity
+
 - **Time Complexity**: $O(n)$
   - We iterate through the height array three times, once for filling the `left_max[]`, once for the `right_max[]`, and once for calculating the trapped water.
 - **Space Complexity**: $O(n)$
@@ -56,3 +61,4 @@ public:
         return water;
     }
 };
+```

@@ -1,17 +1,25 @@
+# [134. Gas Station](https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The task is to find a starting gas station index that allows completing a circular route of gas stations, where at each station, a certain amount of gas is provided, and a certain amount of gas is needed to reach the next station. If the total gas is less than the total cost, the journey cannot be completed. Otherwise, we can find the starting point by making a single pass through the gas stations.
 
 ---
 
 ## Approach
+
 1. **Check total gas vs. total cost**: First, sum the gas provided and the cost required at each station. If the total gas is less than the total cost, return -1 as it is impossible to complete the journey.
 2. **Single pass to find the starting station**: Traverse the gas stations and track the current gas balance (`current_gas`). If at any point, `current_gas` becomes negative, it means we cannot start the journey from any station before the current one. Thus, reset the starting station to the next station and reset `current_gas` to 0. After one complete pass, return the starting station.
+
 ---
+
 ## Complexity
+
 - **Time Complexity**: $$O(n)$$, where $$n$$ is the number of gas stations. We only make one pass through the gas stations.
 - **Space Complexity**: $$O(1)$$, as we only use a few extra variables.
 
 ## Code (C++)
+
 ```cpp
 /*************************************************
 * Name:        canCompleteCircuit
@@ -57,3 +65,4 @@ public:
         return start;
     }
 };
+```

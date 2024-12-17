@@ -1,5 +1,9 @@
+# [135. Candy](https://leetcode.com/problems/candy/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The problem requires distributing the minimum number of candies to children based on their ratings, while satisfying two conditions:
+
 1. Every child must receive at least one candy.
 2. Children with higher ratings must receive more candies than their adjacent neighbors.
 
@@ -8,6 +12,7 @@ The greedy approach works here: make two passes over the array, first from left 
 ---
 
 ## Approach
+
 1. **Left to Right Pass**: Start by giving each child one candy. Then traverse the ratings from left to right. If the current child's rating is higher than the previous child's, increment their candy count.
 2. **Right to Left Pass**: Traverse from right to left. If the current child's rating is higher than the next child's, ensure that they have more candies by taking the maximum of the current candy count and one more than the next child's candy count.
 3. **Sum Up**: Sum all the candies to get the minimum number of candies needed.
@@ -15,6 +20,7 @@ The greedy approach works here: make two passes over the array, first from left 
 ---
 
 ## Complexity
+
 - **Time Complexity**: $$O(n)$$
   - The solution requires two linear passes over the list, thus it takes linear time.
 - **Space Complexity**: $$O(n)$$
@@ -23,6 +29,7 @@ The greedy approach works here: make two passes over the array, first from left 
 ---
 
 ## Code (C++)
+
 ```cpp
 class Solution {
 public:
@@ -56,3 +63,4 @@ public:
         return totalCandies;
     }
 };
+```

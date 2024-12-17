@@ -1,10 +1,15 @@
+# [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/?envType=study-plan-v2&envId=top-interview-150)
+
 ## Intuition
+
 The problem requires us to transform a given string into a Z-shaped pattern, then read it row by row to form the final result. The key observation is that the Z-shaped pattern alternates between moving downwards through the rows and then upwards. This pattern can be simulated by keeping track of the current row and switching directions whenever we hit the top or bottom row.
 
 ---
+
 ## Approach
+
 1. **Edge Case Handling**: If the number of rows is 1 or the string length is less than or equal to `numRows`, the string doesn't need any transformation. Return the original string.
-   
+
 2. **Simulating the Z-Shape**:
    - Initialize a list (or vector in C++) with `numRows` empty strings to represent each row.
    - Use a pointer `row` to keep track of which row the current character belongs to and a `direction` variable to switch between moving down and moving up.
@@ -12,7 +17,9 @@ The problem requires us to transform a given string into a Z-shaped pattern, the
    - When you reach the top or bottom row, reverse the direction of movement.
 
 3. **Concatenate Rows**: After all characters have been placed in their respective rows, concatenate all rows to form the final string.
+
 ---
+
 ## Complexity
 
 - **Time Complexity**: $$O(n)$$, where $$n$$ is the length of the input string `s`. We iterate through the string exactly once, placing each character in the appropriate row.
@@ -65,3 +72,4 @@ public:
         return result;
     }
 };
+```
